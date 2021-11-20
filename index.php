@@ -1,51 +1,44 @@
 <?php
 // Reads the variables sent via POST
-$sessionId   = $_POST["sessionId"];
+$sessionId = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $text = $_POST["text"];
 
 //This is the first menu screen
-
-if ( $text == "" ) {
-  $response  = "CON Welcome to the PASSCO app \n";
-  $response .= "1. Enter 1 to continue";
+if ($text == "") {
+    $response = "CON Welcome to The PASSCO App \n";
+    $response .= "1. Enter 1 to continue";
 }
 
-
-// Menu for a user who selects '1' from the first menu
-// Will be brought to this second menu screen
-
-else if ($text == "1") {
-  $response  = "CON  Select exams type \n";
-  $response .= "1. BECE \n";
-  $response .= "2. WASSCE \n";
-  
+// Menu for a user who selects '1' from the first menu// Will be brought to this second menu screen
+elseif ($text == "1") {
+    $response = "CON  Please select an exams type below \n";
+    $response .= "1. BECE \n";
+    $response .= "2. WASSCE \n";
+    
 }
-
 
 //Menu for a user who selects '1' from the second menu above
 // Will be brought to this third menu screen
-else if ($text == "1*1") {
-  $response = "CON Select Subject \n";
-  $response .= "1. Maths \n";
-  $response .= "2. Science \n";
+elseif ($text == "1*1") {
+    $response = "CON Please select your subject \n";
+    $response .= "1. Maths \n";
+    $response .= "2. Science \n";
+} elseif ($text == "1*1*1") {
+    $response = "CON Please select year for Maths questions \n";
+    $response .= "1. 2018 \n";
+    $response .= "2. 2019 \n";
+    $response .= "Enter 0 to cancel";
+  elseif ($text == "1*1*2") {
+        $response = "CON Please select year for Science questions \n";
+        $response .= "1. 2018 \n";
+        $response .= "2. 2019 \n";
+        $response .= "Enter 0 to cancel";
+} elseif ($text == "1*1*1*1") {
+    $response = "END Your Table reservation for 2 has been booked";
+} elseif ($text == "1*1*1*0") {
+    $response = "END Your Table reservation for 2 has been canceled";
 }
-
-else if ($text == "1*1*1") {
-  $response = "CON Select Year \n";
-  $response .= "1. 2018 \n";
-  $response .= "2. 2019 \n";
-  $response .= "Enter 0 to cancel";
-}
-
-else if ($text == "1*1*1*1") {
-  $response = "Enter your email to receive the PASSCO \n" ;
-  $response = "END PASSCO sent to your email";
-
-  
-
-// Menu for a user who selects "2" from the second menu above
-// Will be brought to this fourth menu screen
 // Menu for a user who selects "2" from the second menu above
 // Will be brought to this fourth menu screen
 elseif ($text == "1*2") {
@@ -97,9 +90,7 @@ elseif ($text == "1*4*1") {
 }
 
 //echo response
-
 header('Content-type: text/plain');
-echo $response
-
-
+echo $response;
 ?>
+
