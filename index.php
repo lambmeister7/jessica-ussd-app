@@ -28,38 +28,40 @@ else if ($text == "1*1") {
 }
 
 else if ($text == "1*1*1") {
-  $response = "CON Select year for Maths \n";
+  $response = "CON Select year for BECE Maths \n";
   $response .= "1. 2018 \n";
   $response .= "2. 2019 \n";
   $response .= "Enter 0 to cancel";
 }
 
 else if ($text == "1*1*1*1") {
-  $response = "CON Please select email to receive PASSCO \n";
+  $response = "CON Please select email to receive BECE PASSCO \n";
   $response .= "1. Email \n";
   
 }
 
 else if ($text == "1*1*1*1*1") {
-  $response = "END Your PASSCO has been sent to your email";
+  $response = "END Your BECE PASSCO has been sent to your email";
 }
 
 
 else if ($text == "1*1*1*0") {
-  $response = "END Your Table reservation for 2 has been canceled";
+  $response = "END Your PASSCO request is canceled";
 }
 
 // Menu for a user who selects "2" from the second menu above
 // Will be brought to this fourth menu screen
 else if ($text == "1*2") {
-  $response = "CON You are about to book a table for 4 \n";
-  $response .= "Please Enter 1 to confirm \n";
+   $response = "CON Select subject \n";
+  $response .= "1. Maths \n";
+  $response .= "2. Science \n";
 }
 
 // Menu for a user who selects "1" from the fourth menu screen
 else if ($text == "1*2*1") {
-  $response = "CON Table for 4 cost -N- 150,000.00 \n";
-  $response .= "Enter 1 to continue \n";
+  $response = "CON Select year for WASCCE Maths \n";
+  $response .= "1. 2018 \n";
+  $response .= "2. 2019 \n";
   $response .= "Enter 0 to cancel";
 }
         
