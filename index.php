@@ -41,7 +41,7 @@ else if ($text == "1*1*1*1") {
 }
 
 else if ($text == "1*1*1*1*1") {
-  $response = "END Your BECE PASSCO has been sent to your email";
+  $response = "END Your BECE PASSCO has been sent to the email registered on this device!";
 }
 
 
@@ -66,11 +66,17 @@ else if ($text == "1*2*1") {
 }
         
 else if ($text == "1*2*1*1") {
-  $response = "END Your Table reservation for 4 has been booked";
+     $response = "CON Please select email to receive WASSCE PASSCO \n";
+  $response .= "1. Email \n";
 }
+
+else if ($text == "1*2*1*1*1") {
+  $response = "END Your WASSCE PASSCO has been sent to the email registered on this device!";
+}
+
     
 else if ($text == "1*2*1*0") {
-  $response = "END Your Table reservation for 4 has been canceled";
+  $response = "END Your PASSCO request has been canceled";
 }
 
 // Menu for a user who enters "3" from the second menu above
