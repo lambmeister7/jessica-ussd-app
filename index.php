@@ -27,12 +27,14 @@ else if ($text == "1") {
 // Will be brought to this third menu screen
 else if ($text == "1*1") {
   $response = "CON Select Subject \n";
-  $response .= "Please Enter 1 to confirm \n";
+  $response .= "1. Maths \n";
+  $response .= "2. Science \n";
 }
 
 else if ($text == "1*1*1") {
-  $response = "CON Table for 2 cost -N- 50,000.00 \n";
-  $response .= "Enter 1 to continue \n";
+  $response = "CON Select Year \n";
+  $response .= "1. 2018 \n";
+  $response .= "2. 2019 \n";
   $response .= "Enter 0 to cancel";
 }
 
