@@ -5,40 +5,43 @@ $serviceCode = $_POST["serviceCode"];
 $text = $_POST["text"];
 
 //This is the first menu screen
-
-if ( $text == "" ) {
-  $response  = "CON Hi welcome, I can help you with Event Reservation \n";
-  $response .= "1. Enter 1 to continue";
+if ($text == "") {
+    $response = "CON Welcome to The PASSCO App \n";
+    $response .= "1. Enter 1 to continue";
 }
 
-
-// Menu for a user who selects '1' from the first menu
-// Will be brought to this second menu screen
-
-else if ($text == "1") {
-  $response  = "CON  Pick a table for reservation below \n";
-  $response .= "1. Table for 2 \n";
-  $response .= "2. Table for 4 \n";
-  $response .= "3. Table for 6 \n";
-  $response .= "4. Table for 8 \n";
+// Menu for a user who selects '1' from the first menu// Will be brought to this second menu screen
+elseif ($text == "1") {
+    $response = "CON  Please select an exams type below \n";
+    $response .= "1. BECE \n";
+    $response .= "2. WASSCE \n";
+    
 }
 
 
 //Menu for a user who selects '1' from the second menu above
 // Will be brought to this third menu screen
 else if ($text == "1*1") {
-  $response = "CON You are about to book a table for 2 \n";
-  $response .= "Please Enter 1 to confirm \n";
+  $response = "CON Select subject \n";
+  $response .= "1. Maths \n";
+  $response .= "2. Science \n";
 }
 
 else if ($text == "1*1*1") {
-  $response = "CON Table for 2 cost -N- 50,000.00 \n";
-  $response .= "Enter 1 to continue \n";
+  $response = "CON Select year for Maths \n";
+  $response .= "1. 2018 \n";
+  $response .= "2. 2019 \n";
   $response .= "Enter 0 to cancel";
 }
 
 else if ($text == "1*1*1*1") {
-  $response = "END Your Table reservation for 2 has been booked";
+  $response = "CON Please select email to receive PASSCO \n";
+  $response .= "1. Email \n";
+  
+}
+
+else if ($text == "1*1*1*1*1") {
+  $response = "END Your PASSCO has been sent to your email";
 }
 
 
