@@ -39,7 +39,8 @@ else if ($text == "1*1*1") {
 }
 
 else if ($text == "1*1*1*1") {
-  $response = "END Your Table reservation for 2 has been booked";
+  $response = "Enter your email to receive the PASSCO";
+  $response = "END PASSCO sent to your email";
 }
 
 
